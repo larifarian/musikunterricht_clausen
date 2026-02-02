@@ -20,12 +20,21 @@
     <meta property="og:description" content="Musikunterricht in Grafschaft: Klavier, Blockflöte und Marimba. Individueller Unterricht für alle Altersgruppen.">
     <meta property="og:locale" content="de_DE">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        'serif': ['Lora', 'ui-serif', 'Georgia', 'serif'],
+                    },
                     colors: {
                         'brand': {
                             50: '#faffeb',
@@ -181,8 +190,8 @@
                         <circle cx="33" cy="10.5" r="3" fill="#84b824"/>
                     </svg>
                     <div class="flex flex-col leading-none">
-                        <span class="text-2xl font-bold tracking-tight">Klavierunterricht</span>
-                        <span class="text-2xl font-bold tracking-tight">Clausen</span>
+                        <span class="font-serif text-2xl font-bold tracking-tight">Klavierunterricht</span>
+                        <span class="font-serif text-2xl font-bold tracking-tight">Clausen</span>
                     </div>
                 </a>
 
@@ -231,7 +240,7 @@
         </svg>
 
         <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
                 Klavierunterricht Clausen
             </h1>
             <p class="text-xl md:text-2xl mb-8 text-brand-100 max-w-2xl mx-auto">
@@ -260,7 +269,7 @@
                 </div>
                 <!-- Text -->
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 text-gray-800">
                         Willkommen in meinem Musikzimmer
                     </h2>
                     <p class="text-lg text-gray-600 mb-6">
@@ -283,7 +292,7 @@
     <!-- Leistungen Section -->
     <section id="leistungen" class="py-16 md:py-24 bg-gray-50 scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
                 Mein Unterrichtsangebot
             </h2>
             <div id="leistungen-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -296,7 +305,7 @@
     <!-- Termine Section -->
     <section id="termine" class="py-16 md:py-24 bg-white scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
                 Konzerte & Termine
             </h2>
             <div id="termine-container" class="max-w-3xl mx-auto space-y-6">
@@ -309,13 +318,13 @@
     <!-- Kontakt Section -->
     <section id="kontakt" class="py-16 md:py-24 bg-gray-100 scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
                 Kontakt
             </h2>
             <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
                 <!-- Kontaktinformationen -->
                 <div>
-                    <h3 class="text-xl font-semibold mb-6">So erreichen Sie mich</h3>
+                    <h3 class="font-serif text-xl font-semibold mb-6">So erreichen Sie mich</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="text-brand-600 mr-4 mt-1">
@@ -356,7 +365,7 @@
 
                 <!-- Kontaktformular -->
                 <div>
-                    <h3 class="text-xl font-semibold mb-6">Schreiben Sie mir</h3>
+                    <h3 class="font-serif text-xl font-semibold mb-6">Schreiben Sie mir</h3>
                     <form action="https://formsubmit.co/cordulaclausen@arcor.de" method="POST" class="space-y-4">
                         <!-- Hidden Fields für FormSubmit Konfiguration -->
                         <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Website">
@@ -387,7 +396,7 @@
     <!-- Über mich Section -->
     <section id="ueber-mich" class="py-16 md:py-24 bg-white scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
                 Über mich
             </h2>
 
@@ -402,7 +411,7 @@
 
                 <!-- Biografie Text -->
                 <div class="space-y-6 md:col-span-2">
-                    <h3 class="text-3xl font-bold text-gray-800">Cordula Clausen</h3>
+                    <h3 class="font-serif text-3xl font-bold text-gray-800">Cordula Clausen</h3>
                     <p class="text-lg text-gray-600 leading-relaxed">
                         Cordula Clausen erhielt mit vier Jahren ersten Instrumentalunterricht. Bis zum Abitur widmete sie sich intensiv dem Klavier und hatte diverse Auftritte mit Kammermusikensembles.
                     </p>
@@ -419,7 +428,7 @@
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
                 <!-- Abschlüsse -->
                 <div class="bg-brand-50 rounded-xl p-6">
-                    <h4 class="text-xl font-bold text-gray-800 mb-6">Ausbildung</h4>
+                    <h4 class="font-serif text-xl font-bold text-gray-800 mb-6">Ausbildung</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 text-brand-600 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -496,8 +505,8 @@
                             <circle cx="33" cy="10.5" r="3" fill="#d1d5db"/>
                         </svg>
                         <div class="flex flex-col leading-none">
-                            <span class="text-lg font-bold">Klavierunterricht</span>
-                            <span class="text-lg font-bold">Clausen</span>
+                            <span class="font-serif text-lg font-bold">Klavierunterricht</span>
+                            <span class="font-serif text-lg font-bold">Clausen</span>
                         </div>
                     </div>
                     <p class="text-gray-400">
@@ -505,7 +514,7 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <h4 class="font-serif text-lg font-semibold mb-4">Links</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" class="hover:text-white transition">Willkommen</a></li>
                         <li><a href="#leistungen" class="hover:text-white transition">Unterricht</a></li>
@@ -515,7 +524,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Rechtliches</h4>
+                    <h4 class="font-serif text-lg font-semibold mb-4">Rechtliches</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
                         <li><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></li>
