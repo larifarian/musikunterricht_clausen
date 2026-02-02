@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marimba - Klavierunterricht Clausen</title>
+    <meta name="description" content="Marimba-Unterricht - Entdecken Sie die faszinierenden Klänge dieses besonderen Schlaginstruments.">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            50: '#faffeb',
+                            100: '#f2ffc7',
+                            200: '#e4ff94',
+                            300: '#d2ff5c',
+                            400: '#c0ff3e',
+                            500: '#a8e62e',
+                            600: '#84b824',
+                            700: '#638a1c',
+                            800: '#4d6d1a',
+                            900: '#3d5a18',
+                        },
+                        'accent': {
+                            50: '#fff5f5',
+                            100: '#ffe3e3',
+                            200: '#ffc9c9',
+                            300: '#ffa8a8',
+                            400: '#ff8787',
+                            500: '#ff6b6b',
+                            600: '#fa5252',
+                            700: '#e03131',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-transparent shadow-none sticky top-0 z-50 relative overflow-visible">
+        <!-- KOMPLETT-SVG: Hintergrund + Klaviatur + Freischnitt in einem -->
+        <svg class="absolute inset-0 w-full h-[calc(100%+12px)] pointer-events-none drop-shadow-md" viewBox="0 0 1000 112" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gradient für Ausblenden der Klaviatur -->
+            <defs>
+                <linearGradient id="fadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="white" stop-opacity="1"/>
+                    <stop offset="55%" stop-color="white" stop-opacity="1"/>
+                    <stop offset="70%" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                <mask id="klaviaturMask">
+                    <rect x="0" y="0" width="1000" height="112" fill="url(#fadeRight)"/>
+                </mask>
+            </defs>
+
+            <!-- Weisser Header-Hintergrund (bis kurz vor die Abrundungen) -->
+            <rect x="0" y="0" width="1000" height="109" fill="white"/>
+
+            <!-- Klaviatur im Hintergrund (halbtransparent, mit Ausblendung nach rechts) -->
+            <g opacity="0.15" mask="url(#klaviaturMask)">
+                <!-- Oktave 1: C D E F G A H -->
+                <rect x="0" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="36" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="72" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="108" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="144" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="180" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="216" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <!-- Schwarze Tasten Oktave 1 -->
+                <rect x="26" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="62" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="134" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="170" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="206" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <!-- Oktave 2: C D E F G A H -->
+                <rect x="252" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="288" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="324" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="360" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="396" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="432" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="468" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <!-- Schwarze Tasten Oktave 2 -->
+                <rect x="278" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="314" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="386" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="422" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="458" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <!-- Oktave 3: C D E F G A H -->
+                <rect x="504" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="540" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="576" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="612" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="648" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="684" y="0" width="34" height="109" fill="white" stroke="#84b824" stroke-width="1"/>
+                <rect x="720" y="0" width="280" height="109" fill="white"/>
+                <line x1="720" y1="0" x2="720" y2="109" stroke="#84b824" stroke-width="1"/>
+                <!-- Schwarze Tasten Oktave 3 -->
+                <rect x="530" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="566" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="638" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="674" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+                <rect x="710" y="-2" width="18" height="30" rx="2" ry="2" fill="#84b824"/>
+            </g>
+
+            <!-- Freischnitt: Abgerundete Tasten (3 Oktaven = 21 Tasten) -->
+            <rect x="0" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="36" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="72" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="108" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="144" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="180" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="216" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="252" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="288" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="324" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="360" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="396" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="432" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="468" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="504" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="540" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="576" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="612" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="648" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="684" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <rect x="720" y="96" width="34" height="16" rx="3" ry="3" fill="white"/>
+            <!-- Rechte Seite: Glatte weisse Kante -->
+            <rect x="754" y="96" width="246" height="16" fill="white"/>
+        </svg>
+        <nav class="max-w-6xl mx-auto px-4 py-4 relative z-10">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 text-brand-700 group">
+                    <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Äußerer Kreis mit Gradient -->
+                        <defs>
+                            <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#84b824;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#638a1c;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="30" fill="white" stroke="url(#circleGradient)" stroke-width="2.5"/>
+
+                        <!-- Klaviertasten (7 weiße Tasten = 1 Oktave) - horizontal zentriert -->
+                        <rect x="13" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="18.5" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="24" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="29.5" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="35" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="40.5" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+                        <rect x="46" y="24" width="5.5" height="22" rx="0.8" fill="white" stroke="#638a1c" stroke-width="1"/>
+
+                        <!-- Schwarze Tasten (5 Tasten) -->
+                        <rect x="17" y="24" width="3" height="11" rx="0.4" fill="#638a1c"/>
+                        <rect x="22.5" y="24" width="3" height="11" rx="0.4" fill="#638a1c"/>
+                        <rect x="33.5" y="24" width="3" height="11" rx="0.4" fill="#638a1c"/>
+                        <rect x="39" y="24" width="3" height="11" rx="0.4" fill="#638a1c"/>
+                        <rect x="44.5" y="24" width="3" height="11" rx="0.4" fill="#638a1c"/>
+
+                        <!-- Marimba-Schlägel (gekreuzt näher an den Köpfen) -->
+                        <!-- Schlägel 1 (flacher Winkel) -->
+                        <line x1="29" y1="14.5" x2="48" y2="21.5" stroke="#638a1c" stroke-width="1.4" stroke-linecap="round"/>
+                        <circle cx="28.5" cy="14" r="3" fill="#84b824"/>
+                        <!-- Schlägel 2 (steiler Winkel) -->
+                        <line x1="33.5" y1="11" x2="45" y2="24" stroke="#638a1c" stroke-width="1.4" stroke-linecap="round"/>
+                        <circle cx="33" cy="10.5" r="3" fill="#84b824"/>
+                    </svg>
+                    <div class="flex flex-col leading-none">
+                        <span class="text-2xl font-bold tracking-tight">Klavierunterricht</span>
+                        <span class="text-2xl font-bold tracking-tight">Clausen</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-brand-600 transition">Willkommen</a>
+                    <a href="index.html#leistungen" class="text-gray-600 hover:text-brand-600 transition">Unterricht</a>
+                    <a href="index.html#termine" class="text-gray-600 hover:text-brand-600 transition">Konzerte & Termine</a>
+                    <a href="index.html#kontakt" class="text-gray-600 hover:text-brand-600 transition">Kontakt</a>
+                    <a href="index.html#ueber-mich" class="text-gray-600 hover:text-brand-600 transition">Über mich</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+                <a href="index.html" class="block text-gray-600 hover:text-brand-600 transition">Willkommen</a>
+                <a href="index.html#leistungen" class="block text-gray-600 hover:text-brand-600 transition">Unterricht</a>
+                <a href="index.html#termine" class="block text-gray-600 hover:text-brand-600 transition">Konzerte & Termine</a>
+                <a href="index.html#kontakt" class="block text-gray-600 hover:text-brand-600 transition">Kontakt</a>
+                <a href="index.html#ueber-mich" class="block text-gray-600 hover:text-brand-600 transition">Über mich</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-brand-500 to-brand-700 text-white pt-28 pb-16 md:pt-36 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <a href="index.html#leistungen" class="inline-flex items-center text-brand-100 hover:text-white mb-4 transition">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Zurück zur Übersicht
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Marimba</h1>
+            <p class="text-xl text-brand-100">Faszinierende Klänge eines besonderen Instruments</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="prose prose-lg max-w-none">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
+                    <div>
+                        <img src="images/marimba.jpg" alt="Marimba" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-600 mb-4">
+                            Die Marimba gehört zur Familie der Stabspiele und besticht durch ihren warmen, holzigen Klang. Sie ist ein faszinierendes Instrument für alle, die etwas Besonderes suchen.
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            Unterrichtsmaterial und Methoden nach C. Caskel und C. Tarcha. Für das 4-Schlägel-Spiel wird die weit verbreitete Gary Burton-Technik vermittelt.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Zielgruppe und Dauer -->
+                <div class="bg-brand-50 rounded-xl p-6 mb-8">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Für wen?</h3>
+                            <p class="text-gray-600">Kinder (ab 8 Jahren), Jugendliche, Erwachsene</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Unterrichtsform</h3>
+                            <p class="text-gray-600">Einzelunterricht</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-2">Unterrichtsdauer</h3>
+                            <p class="text-gray-600">30 bis 90 Minuten (nach Absprache), wöchentlich</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Unterrichtsinhalte</h2>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="text-gray-600">Erlernen des Instruments (2- und 4-Schlägeltechnik)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="text-gray-600">Harmonielehre und Gehörbildung</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="text-gray-600">Elementare Improvisation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-gray-50 rounded-xl p-8 mt-12">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Interesse geweckt?</h3>
+                <p class="text-gray-600 mb-6">Vereinbaren Sie jetzt eine kostenlose Probestunde und lernen Sie mich und meinen Unterricht kennen.</p>
+                <a href="index.html#kontakt" class="inline-block bg-accent-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-600 transition shadow-lg">
+                    Gratis-Probestunde vereinbaren
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Äußerer Kreis mit Gradient (Grautöne) -->
+                            <defs>
+                                <linearGradient id="circleGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#9ca3af;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6b7280;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="30" fill="#1f2937" stroke="url(#circleGradientFooter)" stroke-width="2.5"/>
+
+                            <!-- Klaviertasten (7 weiße Tasten = 1 Oktave) - horizontal zentriert -->
+                            <rect x="13" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="18.5" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="24" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="29.5" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="35" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="40.5" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+                            <rect x="46" y="24" width="5.5" height="22" rx="0.8" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+
+                            <!-- Schwarze Tasten (5 Tasten) -->
+                            <rect x="17" y="24" width="3" height="11" rx="0.4" fill="#4b5563"/>
+                            <rect x="22.5" y="24" width="3" height="11" rx="0.4" fill="#4b5563"/>
+                            <rect x="33.5" y="24" width="3" height="11" rx="0.4" fill="#4b5563"/>
+                            <rect x="39" y="24" width="3" height="11" rx="0.4" fill="#4b5563"/>
+                            <rect x="44.5" y="24" width="3" height="11" rx="0.4" fill="#4b5563"/>
+
+                            <!-- Marimba-Schlägel (gekreuzt näher an den Köpfen) -->
+                            <!-- Schlägel 1 (flacher Winkel) -->
+                            <line x1="29" y1="14.5" x2="48" y2="21.5" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+                            <circle cx="28.5" cy="14" r="3" fill="#d1d5db"/>
+                            <!-- Schlägel 2 (steiler Winkel) -->
+                            <line x1="33.5" y1="11" x2="45" y2="24" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+                            <circle cx="33" cy="10.5" r="3" fill="#d1d5db"/>
+                        </svg>
+                        <div class="flex flex-col leading-none">
+                            <span class="text-lg font-bold">Klavierunterricht</span>
+                            <span class="text-lg font-bold">Clausen</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        Klavier, Blockflöte & Marimba - individueller Musikunterricht für alle Altersgruppen
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Willkommen</a></li>
+                        <li><a href="index.html#leistungen" class="hover:text-white transition">Unterricht</a></li>
+                        <li><a href="index.html#termine" class="hover:text-white transition">Termine</a></li>
+                        <li><a href="index.html#kontakt" class="hover:text-white transition">Kontakt</a></li>
+                        <li><a href="index.html#ueber-mich" class="hover:text-white transition">Über mich</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Rechtliches</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="impressum.html" class="hover:text-white transition">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Klavierunterricht Clausen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript fuer Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

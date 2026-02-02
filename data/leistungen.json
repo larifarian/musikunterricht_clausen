@@ -1,0 +1,75 @@
+{
+  "leistungen": [
+    {
+      "titel": "Klavier",
+      "beschreibung": "Klassischer und moderner Klavierunterricht für Anfänger und Fortgeschrittene. Individuell angepasst an Ihr Lerntempo.",
+      "link": "klavier.html",
+      "details": {
+        "untertitel": "Klassischer und moderner Klavierunterricht",
+        "inhalt": [
+          "Das Klavier ist eines der vielseitigsten Instrumente überhaupt. Ob klassische Musik, Pop, Jazz oder Filmmusik - die Möglichkeiten sind nahezu unbegrenzt.",
+          "In meinem Unterricht lege ich großen Wert auf eine solide technische Grundlage, kombiniert mit der Freude am Musizieren. Jede Unterrichtsstunde wird individuell auf Ihre Bedürfnisse und Ihr aktuelles Können abgestimmt."
+        ],
+        "highlights": [
+          "Für Anfänger und Fortgeschrittene",
+          "Klassik, Pop, Jazz und mehr",
+          "Vorbereitung auf Prüfungen möglich"
+        ]
+      }
+    },
+    {
+      "titel": "Blockflöte",
+      "beschreibung": "Einstieg und Grundlagen in barocker und deutscher Griffweise.",
+      "link": "blockfloete.html",
+      "details": {
+        "untertitel": "Der perfekte Einstieg in die Musikwelt",
+        "inhalt": [
+          "Die Blockflöte ist das ideale Einstiegsinstrument für Kinder. Sie ist leicht zu erlernen und ermöglicht schnelle Erfolgserlebnisse, die motivieren und Freude an der Musik wecken.",
+          "Aber auch Erwachsene, die (wieder) in die Musik einsteigen möchten, sind herzlich willkommen. Der Unterricht wird auf jedes Alter und jeden Kenntnisstand angepasst."
+        ],
+        "highlights": [
+          "Ideal für Kinder ab 5 Jahren",
+          "Schnelle Erfolgserlebnisse",
+          "Grundlagen der Musiktheorie",
+          "Sopran- und Altblockflöte"
+        ]
+      }
+    },
+    {
+      "titel": "Marimba",
+      "beschreibung": "Entdecken Sie die faszinierenden Klänge dieses besonderen Schlaginstruments.",
+      "link": "marimba.html",
+      "details": {
+        "untertitel": "Faszinierende Klänge eines besonderen Instruments",
+        "inhalt": [
+          "Die Marimba gehört zur Familie der Stabspiele und besticht durch ihren warmen, holzigen Klang. Sie ist ein faszinierendes Instrument für alle, die etwas Besonderes suchen.",
+          "Im Unterricht erlernen Sie die richtige Schlagtechnik, das Spielen mit zwei und vier Schlägeln sowie ein breites Repertoire von klassischer Musik bis zu modernen Stücken."
+        ],
+        "highlights": [
+          "Einzigartiger, warmer Klang",
+          "Zwei- und Vier-Schlägel-Technik",
+          "Koordination und Rhythmusgefühl",
+          "Für Anfänger und Fortgeschrittene"
+        ]
+      }
+    },
+    {
+      "titel": "Probestunde",
+      "beschreibung": "Lernen Sie mich und meinen Unterricht unverbindlich kennen. Vereinbaren Sie eine kostenlose Probestunde.",
+      "link": "probestunde.html",
+      "details": {
+        "untertitel": "Unverbindlich kennenlernen",
+        "inhalt": [
+          "Sie sind sich noch nicht sicher, welches Instrument das Richtige ist? Oder möchten Sie mich und meinen Unterrichtsstil erst einmal kennenlernen? Dann vereinbaren Sie eine kostenlose Probestunde!",
+          "In der Probestunde können Sie verschiedene Instrumente ausprobieren, Fragen stellen und herausfinden, ob die Chemie stimmt. Es gibt keine Verpflichtungen - nur die Freude am Entdecken."
+        ],
+        "highlights": [
+          "Kostenlos und unverbindlich",
+          "Instrumente ausprobieren",
+          "Persönliche Beratung",
+          "Keine Verpflichtungen"
+        ]
+      }
+    }
+  ]
+}
