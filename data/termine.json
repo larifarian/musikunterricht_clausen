@@ -1,3 +1,11 @@
 {
-  "termine": []
+  "termine": [
+      {
+      "titel": "Schülervorspiel",
+      "beschreibung": "",
+      "datum": "2026-11-15",
+      "uhrzeit": "11:30 Uhr",
+      "ort": "Ehemalige Synagoge Ahrweiler, Altenbaustraße 12a"
+    }
+  ]
 }
