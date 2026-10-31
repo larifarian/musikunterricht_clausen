@@ -5,7 +5,8 @@
       "beschreibung": "",
       "datum": "2026-11-15",
       "uhrzeit": "11:30 Uhr",
-      "ort": "Ehemalige Synagoge Ahrweiler, Altenbaustraße 12a"
+      "ort": "Ehemalige Synagoge Ahrweiler, Altenbaustraße 12a",
+      "ortLink": "https://www.google.com/maps/search/?api=1&query=Ehemalige%20Synagoge%20Ahrweiler%2C%20Altenbaustra%C3%9Fe%2012a"
     }
   ]
 }
