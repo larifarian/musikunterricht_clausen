@@ -126,12 +126,15 @@ function renderTermine(termine) {
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800">${termin.titel}</h3>
                     <p class="text-gray-600 mt-1">${termin.beschreibung}</p>
-                    ${termin.ort ? `<p class="text-sm text-gray-500 mt-2">
-                        ${termin.ortLink ? `<a href="${termin.ortLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-brand-600 underline underline-offset-2 hover:text-brand-700 transition">` : `<span class="inline-flex items-center">`}
-                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    ${termin.ort ? `<p class="mt-2">
+                        ${termin.ortLink ? `<a href="${termin.ortLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-50 text-brand-700 text-sm px-3 py-1.5 rounded-full border border-brand-200 hover:bg-brand-100 hover:border-brand-300 transition">` : `<span class="inline-flex items-center text-sm text-gray-500">`}
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             </svg>
                             ${termin.ort}
+                            ${termin.ortLink ? `<svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>` : ''}
                         ${termin.ortLink ? '</a>' : '</span>'}
                     </p>` : ''}
                 </div>
