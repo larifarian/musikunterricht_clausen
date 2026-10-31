@@ -121,7 +121,7 @@ function renderTermine(termine) {
     }
 
     container.innerHTML = aktuelleTermine.map(termin => `
-        <div class="bg-gray-50 border-l-4 border-brand-500 p-6 rounded-r-lg shadow-sm card-hover">
+        <div class="bg-gray-50 border-l-4 border-brand-500 p-6 rounded-r-lg shadow-sm">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800">${termin.titel}</h3>
